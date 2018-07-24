@@ -20,7 +20,7 @@ module.exports = {
                      console.log(body)
                      var getJSON = require('get-json')
                      getJSON('https://explore.burst.cryptoguru.org/api/v1/account/11304873521866505399', function(error, response){
-                        var bal = response.data.balance -1 / 100000000
+                        var bal = response.data.balance / 100000000 - 1
                         console.log(bal)
                         message.reply(`Sent .2 BURST to ${args[0]}! Please allow up to 10 mins for it to apper before trying again! New facuet bal ${bal}`);
                     })
